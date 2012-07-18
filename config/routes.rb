@@ -1,5 +1,9 @@
 Iact::Application.routes.draw do
-  get "main_page/home"
+  root to: 'main_page#home'
+	
+	match '/help',    to: 'main_page#help'
+	match '/about',   to: 'main_page#about'
+	match '/contact', to: 'main_page#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
